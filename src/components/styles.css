@@ -1,0 +1,99 @@
+.sidebar {
+    width: 250px;
+    background-color: #262626;
+    height: 100vh;
+    padding: 20px;
+    color: white;
+  }
+  
+  .logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo-image {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  
+  .nav-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nav-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: default;
+  }
+  
+  .nav-list li.inactive {
+    color: #b0b0b0;
+  }
+  
+  .nav-list li.active {
+    background-color: #444;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .nav-list li svg {
+    margin-right: 10px; }
+  
+  .submenu {
+    padding-left: 20px;
+    list-style-type: none;
+    margin-top: 10px;
+  }
+  
+  .submenu .active-submenu {
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .submenu .inactive {
+    color: #b0b0b0;
+  }
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin-top: 10px;
+  }
+  
+  form input {
+    padding: 8px;
+    margin-top: 5px;
+  }
+  
+  form button {
+    margin-top: 10px;
+  }
+  
+  

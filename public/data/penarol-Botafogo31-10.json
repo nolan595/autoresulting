@@ -1,0 +1,2666 @@
+{
+    "scores": [
+        {
+            "type": 0,
+            "team2": 1,
+            "team1": 3
+        },
+        {
+            "type": 1,
+            "team2": 0,
+            "team1": 1
+        },
+        {
+            "type": 2,
+            "team2": 1,
+            "team1": 2
+        },
+        {
+            "type": 6,
+            "team2": 1,
+            "team1": 3
+        }
+    ],
+    "leading_team": 3,
+    "season": {
+        "year": {
+            "value": "2024"
+        },
+        "start_date": {
+            "seconds": 1707264000,
+            "nanos": 0
+        },
+        "name": "Cupa Libertadores 2024",
+        "id": "br:season:114037",
+        "features": [
+            23,
+            3,
+            10
+        ],
+        "end_date": {
+            "seconds": 1732924800,
+            "nanos": 0
+        },
+        "competition_id": "br:competition:384"
+    },
+    "universal_id": null,
+    "live_events": [
+        {
+            "type": 2,
+            "subtype": 0,
+            "side": 0,
+            "secondary": null,
+            "primary": null,
+            "minute": {
+                "value": 90
+            },
+            "main": {
+                "text": {
+                    "val": "{t:time}",
+                    "args": [
+                        "stats.football.match.match_finished",
+                        "2024-10-31T02:27:17Z"
+                    ]
+                },
+                "player_id": null
+            },
+            "added_time": null
+        },
+        {
+            "type": 3,
+            "subtype": 0,
+            "side": 0,
+            "secondary": null,
+            "primary": null,
+            "minute": {
+                "value": 90
+            },
+            "main": {
+                "text": {
+                    "val": "{t:string}",
+                    "args": [
+                        "stats.football.match.additional_time",
+                        "**+4**"
+                    ]
+                },
+                "player_id": null
+            },
+            "added_time": {
+                "value": 1
+            }
+        },
+        {
+            "type": 13,
+            "subtype": 0,
+            "side": 1,
+            "secondary": null,
+            "primary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.var_goal"
+                    ]
+                },
+                "player_id": null
+            },
+            "minute": {
+                "value": 90
+            },
+            "main": null,
+            "added_time": {
+                "value": 1
+            }
+        },
+        {
+            "type": 4,
+            "subtype": 8,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}: {string}",
+                    "args": [
+                        "stats.football.match.assist",
+                        "Perez, Rodrigo"
+                    ]
+                },
+                "player_id": {
+                    "value": "br:player:1797482"
+                }
+            },
+            "primary": {
+                "text": {
+                    "val": "Batista, Facundo",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:1407169"
+                }
+            },
+            "minute": {
+                "value": 89
+            },
+            "main": {
+                "text": {
+                    "val": "{string}",
+                    "args": [
+                        "3:1"
+                    ]
+                },
+                "player_id": null
+            },
+            "added_time": null
+        },
+        {
+            "type": 4,
+            "subtype": 8,
+            "side": 2,
+            "secondary": {
+                "text": {
+                    "val": "{t}: {string}",
+                    "args": [
+                        "stats.football.match.assist",
+                        "Freitas, Marlon"
+                    ]
+                },
+                "player_id": {
+                    "value": "br:player:822758"
+                }
+            },
+            "primary": {
+                "text": {
+                    "val": "Almada, Thiago",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:1558544"
+                }
+            },
+            "minute": {
+                "value": 88
+            },
+            "main": {
+                "text": {
+                    "val": "{string}",
+                    "args": [
+                        "2:1"
+                    ]
+                },
+                "player_id": null
+            },
+            "added_time": null
+        },
+        {
+            "type": 9,
+            "subtype": 0,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.shot_off_target"
+                    ]
+                },
+                "player_id": null
+            },
+            "primary": null,
+            "minute": {
+                "value": 87
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 1,
+            "subtype": 2,
+            "side": 1,
+            "secondary": null,
+            "primary": {
+                "text": {
+                    "val": "Sosa Ospital, Ignacio",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:2143086"
+                }
+            },
+            "minute": {
+                "value": 86
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 9,
+            "subtype": 0,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.shot_off_target"
+                    ]
+                },
+                "player_id": null
+            },
+            "primary": null,
+            "minute": {
+                "value": 85
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 12,
+            "subtype": 0,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}: {string}",
+                    "args": [
+                        "stats.football.match.substitution_out",
+                        "Milans, Pedro"
+                    ]
+                },
+                "player_id": {
+                    "value": "br:player:1749999"
+                }
+            },
+            "primary": {
+                "text": {
+                    "val": "Avenatti, Felipe",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:308058"
+                }
+            },
+            "minute": {
+                "value": 76
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 12,
+            "subtype": 0,
+            "side": 2,
+            "secondary": {
+                "text": {
+                    "val": "{t}: {string}",
+                    "args": [
+                        "stats.football.match.substitution_out",
+                        "Savarino, Jefferson"
+                    ]
+                },
+                "player_id": {
+                    "value": "br:player:1104729"
+                }
+            },
+            "primary": {
+                "text": {
+                    "val": "Barboza, Alexander",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:862590"
+                }
+            },
+            "minute": {
+                "value": 72
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 1,
+            "subtype": 2,
+            "side": 2,
+            "secondary": null,
+            "primary": {
+                "text": {
+                    "val": "Almada, Thiago",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:1558544"
+                }
+            },
+            "minute": {
+                "value": 72
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 1,
+            "subtype": 3,
+            "side": 2,
+            "secondary": null,
+            "primary": {
+                "text": {
+                    "val": "Ponte, Mateo",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:2117582"
+                }
+            },
+            "minute": {
+                "value": 70
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 1,
+            "subtype": 2,
+            "side": 2,
+            "secondary": null,
+            "primary": {
+                "text": {
+                    "val": "Ponte, Mateo",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:2117582"
+                }
+            },
+            "minute": {
+                "value": 69
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 12,
+            "subtype": 0,
+            "side": 2,
+            "secondary": {
+                "text": {
+                    "val": "{t}: {string}",
+                    "args": [
+                        "stats.football.match.substitution_out",
+                        "Bastos"
+                    ]
+                },
+                "player_id": {
+                    "value": "br:player:215956"
+                }
+            },
+            "primary": {
+                "text": {
+                    "val": "Allan",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:158277"
+                }
+            },
+            "minute": {
+                "value": 67
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 4,
+            "subtype": 8,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}: {string}",
+                    "args": [
+                        "stats.football.match.assist",
+                        "Hernandez, Lucas"
+                    ]
+                },
+                "player_id": {
+                    "value": "br:player:1098180"
+                }
+            },
+            "primary": {
+                "text": {
+                    "val": "Baez, Jaime",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:843719"
+                }
+            },
+            "minute": {
+                "value": 66
+            },
+            "main": {
+                "text": {
+                    "val": "{string}",
+                    "args": [
+                        "2:0"
+                    ]
+                },
+                "player_id": null
+            },
+            "added_time": null
+        },
+        {
+            "type": 12,
+            "subtype": 0,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}: {string}",
+                    "args": [
+                        "stats.football.match.substitution_out",
+                        "Sequeira, Leonardo"
+                    ]
+                },
+                "player_id": {
+                    "value": "br:player:1255150"
+                }
+            },
+            "primary": {
+                "text": {
+                    "val": "Sosa Ospital, Ignacio",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:2143086"
+                }
+            },
+            "minute": {
+                "value": 60
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 12,
+            "subtype": 0,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}: {string}",
+                    "args": [
+                        "stats.football.match.substitution_out",
+                        "Silvera Cabo, Maximiliano Joaquin"
+                    ]
+                },
+                "player_id": {
+                    "value": "br:player:1797470"
+                }
+            },
+            "primary": {
+                "text": {
+                    "val": "Batista, Facundo",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:1407169"
+                }
+            },
+            "minute": {
+                "value": 60
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 12,
+            "subtype": 0,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}: {string}",
+                    "args": [
+                        "stats.football.match.substitution_out",
+                        "Olivera, Maximiliano"
+                    ]
+                },
+                "player_id": {
+                    "value": "br:player:158621"
+                }
+            },
+            "primary": {
+                "text": {
+                    "val": "Hernandez, Lucas",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:1098180"
+                }
+            },
+            "minute": {
+                "value": 60
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 12,
+            "subtype": 0,
+            "side": 2,
+            "secondary": {
+                "text": {
+                    "val": "{t}: {string}",
+                    "args": [
+                        "stats.football.match.substitution_out",
+                        "Vitinho"
+                    ]
+                },
+                "player_id": {
+                    "value": "br:player:1248352"
+                }
+            },
+            "primary": {
+                "text": {
+                    "val": "Ponte, Mateo",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:2117582"
+                }
+            },
+            "minute": {
+                "value": 58
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 12,
+            "subtype": 0,
+            "side": 2,
+            "secondary": {
+                "text": {
+                    "val": "{t}: {string}",
+                    "args": [
+                        "stats.football.match.substitution_out",
+                        "Tche Tche"
+                    ]
+                },
+                "player_id": {
+                    "value": "br:player:992685"
+                }
+            },
+            "primary": {
+                "text": {
+                    "val": "Eduardo, Carlos",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:76507"
+                }
+            },
+            "minute": {
+                "value": 58
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 13,
+            "subtype": 0,
+            "side": 2,
+            "secondary": null,
+            "primary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.var_no_penalty"
+                    ]
+                },
+                "player_id": null
+            },
+            "minute": {
+                "value": 57
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 9,
+            "subtype": 0,
+            "side": 2,
+            "secondary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.shot_off_target"
+                    ]
+                },
+                "player_id": null
+            },
+            "primary": null,
+            "minute": {
+                "value": 52
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 9,
+            "subtype": 0,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.shot_off_target"
+                    ]
+                },
+                "player_id": null
+            },
+            "primary": null,
+            "minute": {
+                "value": 51
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 1,
+            "subtype": 2,
+            "side": 2,
+            "secondary": null,
+            "primary": {
+                "text": {
+                    "val": "Vitinho",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:1248352"
+                }
+            },
+            "minute": {
+                "value": 49
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 9,
+            "subtype": 0,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.shot_off_target"
+                    ]
+                },
+                "player_id": null
+            },
+            "primary": null,
+            "minute": {
+                "value": 47
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 12,
+            "subtype": 0,
+            "side": 2,
+            "secondary": {
+                "text": {
+                    "val": "{t}: {string}",
+                    "args": [
+                        "stats.football.match.substitution_out",
+                        "Matheus Martins"
+                    ]
+                },
+                "player_id": {
+                    "value": "br:player:2148960"
+                }
+            },
+            "primary": {
+                "text": {
+                    "val": "Almada, Thiago",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:1558544"
+                }
+            },
+            "minute": {
+                "value": 45
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 12,
+            "subtype": 0,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}: {string}",
+                    "args": [
+                        "stats.football.match.substitution_out",
+                        "Garcia Grana, Sergio Damian"
+                    ]
+                },
+                "player_id": {
+                    "value": "br:player:2569845"
+                }
+            },
+            "primary": {
+                "text": {
+                    "val": "De Amores Ravelo, Guillermo Rafael",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:155975"
+                }
+            },
+            "minute": {
+                "value": 45
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 1,
+            "subtype": 1,
+            "side": 1,
+            "secondary": null,
+            "primary": {
+                "text": {
+                    "val": "Aguerre, Washington",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:311402"
+                }
+            },
+            "minute": {
+                "value": 45
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 7,
+            "subtype": 0,
+            "side": 0,
+            "secondary": null,
+            "primary": null,
+            "minute": {
+                "value": 45
+            },
+            "main": {
+                "text": {
+                    "val": "{t} **1:0**",
+                    "args": [
+                        "stats.football.match.halftime_score"
+                    ]
+                },
+                "player_id": null
+            },
+            "added_time": null
+        },
+        {
+            "type": 1,
+            "subtype": 2,
+            "side": 2,
+            "secondary": null,
+            "primary": {
+                "text": {
+                    "val": "Matheus Martins",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:2148960"
+                }
+            },
+            "minute": {
+                "value": 45
+            },
+            "main": null,
+            "added_time": {
+                "value": 4
+            }
+        },
+        {
+            "type": 10,
+            "subtype": 0,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.shot_on_target"
+                    ]
+                },
+                "player_id": null
+            },
+            "primary": null,
+            "minute": {
+                "value": 45
+            },
+            "main": null,
+            "added_time": {
+                "value": 2
+            }
+        },
+        {
+            "type": 3,
+            "subtype": 0,
+            "side": 0,
+            "secondary": null,
+            "primary": null,
+            "minute": {
+                "value": 45
+            },
+            "main": {
+                "text": {
+                    "val": "{t:string}",
+                    "args": [
+                        "stats.football.match.additional_time",
+                        "**+3**"
+                    ]
+                },
+                "player_id": null
+            },
+            "added_time": {
+                "value": 1
+            }
+        },
+        {
+            "type": 9,
+            "subtype": 0,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.shot_off_target"
+                    ]
+                },
+                "player_id": null
+            },
+            "primary": null,
+            "minute": {
+                "value": 45
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 9,
+            "subtype": 0,
+            "side": 2,
+            "secondary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.shot_off_target"
+                    ]
+                },
+                "player_id": null
+            },
+            "primary": null,
+            "minute": {
+                "value": 39
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 9,
+            "subtype": 0,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.shot_off_target"
+                    ]
+                },
+                "player_id": null
+            },
+            "primary": null,
+            "minute": {
+                "value": 38
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 4,
+            "subtype": 8,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}: {string}",
+                    "args": [
+                        "stats.football.match.assist",
+                        "Fernandez, Leonardo"
+                    ]
+                },
+                "player_id": {
+                    "value": "br:player:1016785"
+                }
+            },
+            "primary": {
+                "text": {
+                    "val": "Baez, Jaime",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:843719"
+                }
+            },
+            "minute": {
+                "value": 31
+            },
+            "main": {
+                "text": {
+                    "val": "{string}",
+                    "args": [
+                        "1:0"
+                    ]
+                },
+                "player_id": null
+            },
+            "added_time": null
+        },
+        {
+            "type": 9,
+            "subtype": 0,
+            "side": 2,
+            "secondary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.shot_off_target"
+                    ]
+                },
+                "player_id": null
+            },
+            "primary": null,
+            "minute": {
+                "value": 29
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 9,
+            "subtype": 0,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.shot_off_target"
+                    ]
+                },
+                "player_id": null
+            },
+            "primary": null,
+            "minute": {
+                "value": 28
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 1,
+            "subtype": 2,
+            "side": 2,
+            "secondary": null,
+            "primary": {
+                "text": {
+                    "val": "Bastos",
+                    "args": []
+                },
+                "player_id": {
+                    "value": "br:player:215956"
+                }
+            },
+            "minute": {
+                "value": 28
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 9,
+            "subtype": 0,
+            "side": 2,
+            "secondary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.shot_off_target"
+                    ]
+                },
+                "player_id": null
+            },
+            "primary": null,
+            "minute": {
+                "value": 22
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 9,
+            "subtype": 0,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.shot_off_target"
+                    ]
+                },
+                "player_id": null
+            },
+            "primary": null,
+            "minute": {
+                "value": 9
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 9,
+            "subtype": 0,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.shot_off_target"
+                    ]
+                },
+                "player_id": null
+            },
+            "primary": null,
+            "minute": {
+                "value": 6
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 9,
+            "subtype": 0,
+            "side": 1,
+            "secondary": {
+                "text": {
+                    "val": "{t}",
+                    "args": [
+                        "stats.football.match.shot_off_target"
+                    ]
+                },
+                "player_id": null
+            },
+            "primary": null,
+            "minute": {
+                "value": 2
+            },
+            "main": null,
+            "added_time": null
+        },
+        {
+            "type": 11,
+            "subtype": 0,
+            "side": 0,
+            "secondary": null,
+            "primary": null,
+            "minute": {
+                "value": 1
+            },
+            "main": {
+                "text": {
+                    "val": "{t:time}",
+                    "args": [
+                        "stats.football.match.match_started",
+                        "2024-10-31T00:31:54Z"
+                    ]
+                },
+                "player_id": null
+            },
+            "added_time": null
+        }
+    ],
+    "table_id": null,
+    "attendance": null,
+    "score_coverage_type": 0,
+    "statistics": [
+        {
+            "period": 0,
+            "data": [
+                {
+                    "type": 1,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.ball_possesion"
+                        ]
+                    },
+                    "team2": "46%",
+                    "team1": "54%",
+                    "color_side": 1
+                },
+                {
+                    "type": 18,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.shots"
+                        ]
+                    },
+                    "team2": "5",
+                    "team1": "16",
+                    "color_side": 1
+                },
+                {
+                    "type": 2,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.shots_on_goal"
+                        ]
+                    },
+                    "team2": "1",
+                    "team1": "4",
+                    "color_side": 1
+                },
+                {
+                    "type": 3,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.shots_off_goal"
+                        ]
+                    },
+                    "team2": "4",
+                    "team1": "10",
+                    "color_side": 1
+                },
+                {
+                    "type": 16,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.shots_blocked"
+                        ]
+                    },
+                    "team2": "0",
+                    "team1": "2",
+                    "color_side": 1
+                },
+                {
+                    "type": 4,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.free_kicks"
+                        ]
+                    },
+                    "team2": "11",
+                    "team1": "12",
+                    "color_side": 1
+                },
+                {
+                    "type": 5,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.corner_kicks"
+                        ]
+                    },
+                    "team2": "1",
+                    "team1": "8",
+                    "color_side": 1
+                },
+                {
+                    "type": 6,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.offsides"
+                        ]
+                    },
+                    "team2": "1",
+                    "team1": "2",
+                    "color_side": 1
+                },
+                {
+                    "type": 7,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.throw_ins"
+                        ]
+                    },
+                    "team2": "21",
+                    "team1": "31",
+                    "color_side": 1
+                },
+                {
+                    "type": 8,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.goalkeeper_saves"
+                        ]
+                    },
+                    "team2": "1",
+                    "team1": "0",
+                    "color_side": 2
+                },
+                {
+                    "type": 9,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.goal_kicks"
+                        ]
+                    },
+                    "team2": "22",
+                    "team1": "4",
+                    "color_side": 2
+                },
+                {
+                    "type": 10,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.fouls"
+                        ]
+                    },
+                    "team2": "13",
+                    "team1": "11",
+                    "color_side": 2
+                },
+                {
+                    "type": 11,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.red_cards"
+                        ]
+                    },
+                    "team2": "1",
+                    "team1": "1",
+                    "color_side": 0
+                },
+                {
+                    "type": 12,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.yellow_cards"
+                        ]
+                    },
+                    "team2": "6",
+                    "team1": "1",
+                    "color_side": 2
+                },
+                {
+                    "type": 13,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.dangerous_attacks"
+                        ]
+                    },
+                    "team2": "20",
+                    "team1": "93",
+                    "color_side": 1
+                },
+                {
+                    "type": 14,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.attacks"
+                        ]
+                    },
+                    "team2": "79",
+                    "team1": "134",
+                    "color_side": 1
+                },
+                {
+                    "type": 15,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.penalties"
+                        ]
+                    },
+                    "team2": "1",
+                    "team1": "0",
+                    "color_side": 2
+                },
+                {
+                    "type": 17,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.injuries"
+                        ]
+                    },
+                    "team2": "0",
+                    "team1": "0",
+                    "color_side": 0
+                }
+            ]
+        },
+        {
+            "period": 1,
+            "data": [
+                {
+                    "type": 1,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.ball_possesion"
+                        ]
+                    },
+                    "team2": "45%",
+                    "team1": "55%",
+                    "color_side": 1
+                },
+                {
+                    "type": 18,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.shots"
+                        ]
+                    },
+                    "team2": "3",
+                    "team1": "9",
+                    "color_side": 1
+                },
+                {
+                    "type": 2,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.shots_on_goal"
+                        ]
+                    },
+                    "team2": "0",
+                    "team1": "2",
+                    "color_side": 1
+                },
+                {
+                    "type": 3,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.shots_off_goal"
+                        ]
+                    },
+                    "team2": "3",
+                    "team1": "6",
+                    "color_side": 1
+                },
+                {
+                    "type": 16,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.shots_blocked"
+                        ]
+                    },
+                    "team2": "0",
+                    "team1": "1",
+                    "color_side": 1
+                },
+                {
+                    "type": 4,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.free_kicks"
+                        ]
+                    },
+                    "team2": "7",
+                    "team1": "7",
+                    "color_side": 0
+                },
+                {
+                    "type": 5,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.corner_kicks"
+                        ]
+                    },
+                    "team2": "0",
+                    "team1": "6",
+                    "color_side": 1
+                },
+                {
+                    "type": 6,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.offsides"
+                        ]
+                    },
+                    "team2": "0",
+                    "team1": "2",
+                    "color_side": 1
+                },
+                {
+                    "type": 7,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.throw_ins"
+                        ]
+                    },
+                    "team2": "12",
+                    "team1": "23",
+                    "color_side": 1
+                },
+                {
+                    "type": 8,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.goalkeeper_saves"
+                        ]
+                    },
+                    "team2": "1",
+                    "team1": "0",
+                    "color_side": 2
+                },
+                {
+                    "type": 9,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.goal_kicks"
+                        ]
+                    },
+                    "team2": "13",
+                    "team1": "3",
+                    "color_side": 2
+                },
+                {
+                    "type": 10,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.fouls"
+                        ]
+                    },
+                    "team2": "8",
+                    "team1": "6",
+                    "color_side": 2
+                },
+                {
+                    "type": 11,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.red_cards"
+                        ]
+                    },
+                    "team2": "0",
+                    "team1": "1",
+                    "color_side": 1
+                },
+                {
+                    "type": 12,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.yellow_cards"
+                        ]
+                    },
+                    "team2": "2",
+                    "team1": "0",
+                    "color_side": 2
+                },
+                {
+                    "type": 13,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.dangerous_attacks"
+                        ]
+                    },
+                    "team2": "5",
+                    "team1": "52",
+                    "color_side": 1
+                },
+                {
+                    "type": 14,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.attacks"
+                        ]
+                    },
+                    "team2": "36",
+                    "team1": "71",
+                    "color_side": 1
+                },
+                {
+                    "type": 17,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.injuries"
+                        ]
+                    },
+                    "team2": "0",
+                    "team1": "0",
+                    "color_side": 0
+                }
+            ]
+        },
+        {
+            "period": 2,
+            "data": [
+                {
+                    "type": 1,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.ball_possesion"
+                        ]
+                    },
+                    "team2": "46%",
+                    "team1": "54%",
+                    "color_side": 1
+                },
+                {
+                    "type": 18,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.shots"
+                        ]
+                    },
+                    "team2": "2",
+                    "team1": "7",
+                    "color_side": 1
+                },
+                {
+                    "type": 2,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.shots_on_goal"
+                        ]
+                    },
+                    "team2": "1",
+                    "team1": "2",
+                    "color_side": 1
+                },
+                {
+                    "type": 3,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.shots_off_goal"
+                        ]
+                    },
+                    "team2": "1",
+                    "team1": "4",
+                    "color_side": 1
+                },
+                {
+                    "type": 16,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.shots_blocked"
+                        ]
+                    },
+                    "team2": "0",
+                    "team1": "1",
+                    "color_side": 1
+                },
+                {
+                    "type": 4,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.free_kicks"
+                        ]
+                    },
+                    "team2": "4",
+                    "team1": "5",
+                    "color_side": 1
+                },
+                {
+                    "type": 5,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.corner_kicks"
+                        ]
+                    },
+                    "team2": "1",
+                    "team1": "2",
+                    "color_side": 1
+                },
+                {
+                    "type": 6,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.offsides"
+                        ]
+                    },
+                    "team2": "1",
+                    "team1": "0",
+                    "color_side": 2
+                },
+                {
+                    "type": 7,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.throw_ins"
+                        ]
+                    },
+                    "team2": "9",
+                    "team1": "8",
+                    "color_side": 2
+                },
+                {
+                    "type": 8,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.goalkeeper_saves"
+                        ]
+                    },
+                    "team2": "0",
+                    "team1": "1",
+                    "color_side": 1
+                },
+                {
+                    "type": 9,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.goal_kicks"
+                        ]
+                    },
+                    "team2": "9",
+                    "team1": "1",
+                    "color_side": 2
+                },
+                {
+                    "type": 10,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.fouls"
+                        ]
+                    },
+                    "team2": "5",
+                    "team1": "5",
+                    "color_side": 0
+                },
+                {
+                    "type": 11,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.red_cards"
+                        ]
+                    },
+                    "team2": "1",
+                    "team1": "0",
+                    "color_side": 2
+                },
+                {
+                    "type": 12,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.yellow_cards"
+                        ]
+                    },
+                    "team2": "4",
+                    "team1": "1",
+                    "color_side": 2
+                },
+                {
+                    "type": 13,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.dangerous_attacks"
+                        ]
+                    },
+                    "team2": "15",
+                    "team1": "41",
+                    "color_side": 1
+                },
+                {
+                    "type": 14,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.attacks"
+                        ]
+                    },
+                    "team2": "43",
+                    "team1": "63",
+                    "color_side": 1
+                },
+                {
+                    "type": 15,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.penalties"
+                        ]
+                    },
+                    "team2": "1",
+                    "team1": "0",
+                    "color_side": 2
+                },
+                {
+                    "type": 17,
+                    "text": {
+                        "val": "{t}",
+                        "args": [
+                            "stats.football.match.injuries"
+                        ]
+                    },
+                    "team2": "0",
+                    "team1": "0",
+                    "color_side": 0
+                }
+            ]
+        }
+    ],
+    "symbol": [
+        {
+            "type": 4,
+            "position": 2
+        },
+        {
+            "type": 4,
+            "position": 1
+        },
+        {
+            "type": 3,
+            "position": 2
+        }
+    ],
+    "competition": {
+        "name": "Cupa Libertadores",
+        "id": "br:competition:384",
+        "country_code": {
+            "value": "INT"
+        }
+    },
+    "team2": {
+        "sport_id": 1,
+        "short_code": {
+            "value": "BOT"
+        },
+        "name": "Botafogo RJ",
+        "id": "br:team:1958",
+        "features": [
+            13,
+            20,
+            21
+        ],
+        "country_code": {
+            "value": "BRA"
+        }
+    },
+    "match_state": 2,
+    "stadium": {
+        "name": "Stadionul Centenario",
+        "id": "br:stadium:1001",
+        "country_code": {
+            "value": "URY"
+        },
+        "country": null,
+        "city": {
+            "value": "Montevideo"
+        }
+    },
+    "team2_manager": {
+        "name": "Artur Jorge, Artur Jorge Torres",
+        "id": "br:manager:252619",
+        "country_code": {
+            "value": "PRT"
+        }
+    },
+    "team1": {
+        "sport_id": 1,
+        "short_code": {
+            "value": "PEN"
+        },
+        "name": "Penarol",
+        "id": "br:team:3227",
+        "features": [
+            20,
+            21
+        ],
+        "country_code": {
+            "value": "URY"
+        }
+    },
+    "features": [
+        0,
+        1,
+        2,
+        13,
+        24
+    ],
+    "covered_from": 1,
+    "offer_id": {
+        "value": "ax:match:3320951"
+    },
+    "tournament": {
+        "name": "Copa Libertadores - Playoff",
+        "id": "br:tournament:309"
+    },
+    "highlights_provider": 0,
+    "id": "br:match:50410487",
+    "weather_conditions": 3,
+    "match_status": 100,
+    "referees": [
+        {
+            "type": 1,
+            "name": "Maza Gomez, Piero",
+            "id": "br:referee:1405175",
+            "country_code": {
+                "value": "CHL"
+            }
+        }
+    ],
+    "highlights_available": false,
+    "match_date": {
+        "seconds": 1730334600,
+        "nanos": 0
+    },
+    "highlights": [],
+    "pitch_conditions": 1,
+    "category": {
+        "sport_id": 1,
+        "name": "Internaţional  cluburi",
+        "id": "br:category:393",
+        "features": [],
+        "country_code": {
+            "value": "INT"
+        }
+    },
+    "statistics_groups": [
+        {
+            "stats_types": [
+                1,
+                19,
+                18,
+                2,
+                5,
+                6,
+                10,
+                11,
+                12
+            ],
+            "name": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.groups.key_stats"
+                ]
+            }
+        },
+        {
+            "stats_types": [
+                18,
+                2,
+                3,
+                16,
+                4,
+                14,
+                13,
+                15,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35
+            ],
+            "name": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.groups.attacking"
+                ]
+            }
+        },
+        {
+            "stats_types": [
+                7,
+                9,
+                40,
+                39,
+                41,
+                42,
+                43,
+                44
+            ],
+            "name": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.groups.passes"
+                ]
+            }
+        },
+        {
+            "stats_types": [
+                16,
+                8,
+                37,
+                38
+            ],
+            "name": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.groups.defense"
+                ]
+            }
+        },
+        {
+            "stats_types": [
+                45,
+                46,
+                47
+            ],
+            "name": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.groups.duels"
+                ]
+            }
+        },
+        {
+            "stats_types": [
+                10,
+                11,
+                12
+            ],
+            "name": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.groups.discipline"
+                ]
+            }
+        }
+    ],
+    "live_minute": null,
+    "prematch_stats": [],
+    "team1_manager": {
+        "name": "Aguirre, Diego",
+        "id": "br:manager:148308",
+        "country_code": {
+            "value": "URY"
+        }
+    },
+    "match_stats": [
+        {
+            "type": 18,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.shots"
+                ]
+            },
+            "team2": "5",
+            "team1": "16",
+            "period": 0,
+            "color_side": 1
+        },
+        {
+            "type": 1,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.ball_possesion"
+                ]
+            },
+            "team2": "46%",
+            "team1": "54%",
+            "period": 0,
+            "color_side": 1
+        },
+        {
+            "type": 2,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.shots_on_goal"
+                ]
+            },
+            "team2": "1",
+            "team1": "4",
+            "period": 0,
+            "color_side": 1
+        },
+        {
+            "type": 3,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.shots_off_goal"
+                ]
+            },
+            "team2": "4",
+            "team1": "10",
+            "period": 0,
+            "color_side": 1
+        },
+        {
+            "type": 4,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.free_kicks"
+                ]
+            },
+            "team2": "11",
+            "team1": "12",
+            "period": 0,
+            "color_side": 1
+        },
+        {
+            "type": 5,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.corner_kicks"
+                ]
+            },
+            "team2": "1",
+            "team1": "8",
+            "period": 0,
+            "color_side": 1
+        },
+        {
+            "type": 6,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.offsides"
+                ]
+            },
+            "team2": "1",
+            "team1": "2",
+            "period": 0,
+            "color_side": 1
+        },
+        {
+            "type": 7,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.throw_ins"
+                ]
+            },
+            "team2": "21",
+            "team1": "31",
+            "period": 0,
+            "color_side": 1
+        },
+        {
+            "type": 8,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.goalkeeper_saves"
+                ]
+            },
+            "team2": "1",
+            "team1": "0",
+            "period": 0,
+            "color_side": 2
+        },
+        {
+            "type": 9,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.goal_kicks"
+                ]
+            },
+            "team2": "22",
+            "team1": "4",
+            "period": 0,
+            "color_side": 2
+        },
+        {
+            "type": 10,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.fouls"
+                ]
+            },
+            "team2": "13",
+            "team1": "11",
+            "period": 0,
+            "color_side": 2
+        },
+        {
+            "type": 14,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.attacks"
+                ]
+            },
+            "team2": "79",
+            "team1": "134",
+            "period": 0,
+            "color_side": 1
+        },
+        {
+            "type": 13,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.dangerous_attacks"
+                ]
+            },
+            "team2": "20",
+            "team1": "93",
+            "period": 0,
+            "color_side": 1
+        },
+        {
+            "type": 16,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.shots_blocked"
+                ]
+            },
+            "team2": "0",
+            "team1": "2",
+            "period": 0,
+            "color_side": 1
+        },
+        {
+            "type": 12,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.yellow_cards"
+                ]
+            },
+            "team2": "6",
+            "team1": "1",
+            "period": 0,
+            "color_side": 2
+        },
+        {
+            "type": 11,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.red_cards"
+                ]
+            },
+            "team2": "1",
+            "team1": "1",
+            "period": 0,
+            "color_side": 0
+        },
+        {
+            "type": 15,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.penalties"
+                ]
+            },
+            "team2": "1",
+            "team1": "0",
+            "period": 0,
+            "color_side": 2
+        },
+        {
+            "type": 18,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.shots"
+                ]
+            },
+            "team2": "3",
+            "team1": "9",
+            "period": 1,
+            "color_side": 1
+        },
+        {
+            "type": 1,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.ball_possesion"
+                ]
+            },
+            "team2": "45%",
+            "team1": "55%",
+            "period": 1,
+            "color_side": 1
+        },
+        {
+            "type": 2,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.shots_on_goal"
+                ]
+            },
+            "team2": "0",
+            "team1": "2",
+            "period": 1,
+            "color_side": 1
+        },
+        {
+            "type": 3,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.shots_off_goal"
+                ]
+            },
+            "team2": "3",
+            "team1": "6",
+            "period": 1,
+            "color_side": 1
+        },
+        {
+            "type": 4,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.free_kicks"
+                ]
+            },
+            "team2": "7",
+            "team1": "7",
+            "period": 1,
+            "color_side": 0
+        },
+        {
+            "type": 5,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.corner_kicks"
+                ]
+            },
+            "team2": "0",
+            "team1": "6",
+            "period": 1,
+            "color_side": 1
+        },
+        {
+            "type": 6,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.offsides"
+                ]
+            },
+            "team2": "0",
+            "team1": "2",
+            "period": 1,
+            "color_side": 1
+        },
+        {
+            "type": 7,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.throw_ins"
+                ]
+            },
+            "team2": "12",
+            "team1": "23",
+            "period": 1,
+            "color_side": 1
+        },
+        {
+            "type": 8,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.goalkeeper_saves"
+                ]
+            },
+            "team2": "1",
+            "team1": "0",
+            "period": 1,
+            "color_side": 2
+        },
+        {
+            "type": 9,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.goal_kicks"
+                ]
+            },
+            "team2": "13",
+            "team1": "3",
+            "period": 1,
+            "color_side": 2
+        },
+        {
+            "type": 10,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.fouls"
+                ]
+            },
+            "team2": "8",
+            "team1": "6",
+            "period": 1,
+            "color_side": 2
+        },
+        {
+            "type": 14,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.attacks"
+                ]
+            },
+            "team2": "36",
+            "team1": "71",
+            "period": 1,
+            "color_side": 1
+        },
+        {
+            "type": 13,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.dangerous_attacks"
+                ]
+            },
+            "team2": "5",
+            "team1": "52",
+            "period": 1,
+            "color_side": 1
+        },
+        {
+            "type": 16,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.shots_blocked"
+                ]
+            },
+            "team2": "0",
+            "team1": "1",
+            "period": 1,
+            "color_side": 1
+        },
+        {
+            "type": 12,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.yellow_cards"
+                ]
+            },
+            "team2": "2",
+            "team1": "0",
+            "period": 1,
+            "color_side": 2
+        },
+        {
+            "type": 11,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.red_cards"
+                ]
+            },
+            "team2": "0",
+            "team1": "1",
+            "period": 1,
+            "color_side": 1
+        },
+        {
+            "type": 18,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.shots"
+                ]
+            },
+            "team2": "2",
+            "team1": "7",
+            "period": 2,
+            "color_side": 1
+        },
+        {
+            "type": 1,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.ball_possesion"
+                ]
+            },
+            "team2": "46%",
+            "team1": "54%",
+            "period": 2,
+            "color_side": 1
+        },
+        {
+            "type": 2,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.shots_on_goal"
+                ]
+            },
+            "team2": "1",
+            "team1": "2",
+            "period": 2,
+            "color_side": 1
+        },
+        {
+            "type": 3,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.shots_off_goal"
+                ]
+            },
+            "team2": "1",
+            "team1": "4",
+            "period": 2,
+            "color_side": 1
+        },
+        {
+            "type": 4,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.free_kicks"
+                ]
+            },
+            "team2": "4",
+            "team1": "5",
+            "period": 2,
+            "color_side": 1
+        },
+        {
+            "type": 5,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.corner_kicks"
+                ]
+            },
+            "team2": "1",
+            "team1": "2",
+            "period": 2,
+            "color_side": 1
+        },
+        {
+            "type": 6,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.offsides"
+                ]
+            },
+            "team2": "1",
+            "team1": "0",
+            "period": 2,
+            "color_side": 2
+        },
+        {
+            "type": 7,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.throw_ins"
+                ]
+            },
+            "team2": "9",
+            "team1": "8",
+            "period": 2,
+            "color_side": 2
+        },
+        {
+            "type": 8,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.goalkeeper_saves"
+                ]
+            },
+            "team2": "0",
+            "team1": "1",
+            "period": 2,
+            "color_side": 1
+        },
+        {
+            "type": 9,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.goal_kicks"
+                ]
+            },
+            "team2": "9",
+            "team1": "1",
+            "period": 2,
+            "color_side": 2
+        },
+        {
+            "type": 10,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.fouls"
+                ]
+            },
+            "team2": "5",
+            "team1": "5",
+            "period": 2,
+            "color_side": 0
+        },
+        {
+            "type": 14,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.attacks"
+                ]
+            },
+            "team2": "43",
+            "team1": "63",
+            "period": 2,
+            "color_side": 1
+        },
+        {
+            "type": 13,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.dangerous_attacks"
+                ]
+            },
+            "team2": "15",
+            "team1": "41",
+            "period": 2,
+            "color_side": 1
+        },
+        {
+            "type": 16,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.shots_blocked"
+                ]
+            },
+            "team2": "0",
+            "team1": "1",
+            "period": 2,
+            "color_side": 1
+        },
+        {
+            "type": 12,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.yellow_cards"
+                ]
+            },
+            "team2": "4",
+            "team1": "1",
+            "period": 2,
+            "color_side": 2
+        },
+        {
+            "type": 11,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.red_cards"
+                ]
+            },
+            "team2": "1",
+            "team1": "0",
+            "period": 2,
+            "color_side": 2
+        },
+        {
+            "type": 15,
+            "text": {
+                "val": "{t}",
+                "args": [
+                    "stats.football.match.penalties"
+                ]
+            },
+            "team2": "1",
+            "team1": "0",
+            "period": 2,
+            "color_side": 2
+        }
+    ]
+}
