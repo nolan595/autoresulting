@@ -42,6 +42,8 @@ const goalPeriods = [
 ];
 
 const operators = [
+  { value: '', label: "Select Operator" },
+
   { value: 'sum', label: 'Sum' },
   { value: 'comparison', label: 'Comparison' },
   { value: 'greaterThan', label: 'Greater Than (Yes/No)' },
@@ -163,7 +165,7 @@ const CreateQuestion = ({ onClose, onAddQuestion, editingQuestion }) => {
           />
         )}
 
-        {selectedOperator === 'singleTeam' && selectedStat?.value === 'scores' && (
+        {selectedOperator === 'singleTeam'  && (
           <Select
             options={[
               { value: 'team1', label: 'Home Team' },
@@ -175,6 +177,16 @@ const CreateQuestion = ({ onClose, onAddQuestion, editingQuestion }) => {
             className={styles.select}
           />
         )}
+
+{selectedOperator === 'greaterThan' && (
+  <input
+    type="number"
+    value={threshold}
+    onChange={(e) => setThreshold(e.target.value)}
+    placeholder="Enter threshold"
+    className={styles.input}
+  />
+)}
 
         <button onClick={handleSubmit} className={styles.buttonPrimary}>
           {editingQuestion ? "Save Changes" : "Add Question"}

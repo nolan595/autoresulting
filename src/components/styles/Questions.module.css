@@ -121,3 +121,31 @@ body {
   display: inline-block;
   text-align: center;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #5B24C2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #e0e0e0;
+  color: #777;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 16px;
+}
+

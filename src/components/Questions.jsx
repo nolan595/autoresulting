@@ -1,9 +1,10 @@
-import React, { useEffect, useState  } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FiMoreVertical, FiPlay } from 'react-icons/fi';
 import CreateQuestion from './CreateQuestion';
 import PlayQuestion from './PlayQuestion';
 import axios from 'axios';
 import styles from './styles/Questions.module.css';
+
 const API_BASE_URL = 'https://autoresultingbackend-production.up.railway.app/api';
 
 const Questions = () => {
@@ -13,6 +14,10 @@ const Questions = () => {
   const [selectedQuestion, setSelectedQuestion] = useState(null);
   const [editingQuestion, setEditingQuestion] = useState(null);
   const [openMenuId, setOpenMenuId] = useState(null);
+
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const questionsPerPage = 7;
 
   useEffect(() => {
     fetchQuestions();
@@ -42,8 +47,6 @@ const Questions = () => {
       console.error('Error saving question:', error);
     }
   };
-  
-  
 
   const handleEdit = (question) => {
     setEditingQuestion(question);
@@ -79,18 +82,20 @@ const Questions = () => {
     setOpenMenuId(openMenuId === id ? null : id);
   };
 
-  // Handle click outside to close the dropdown
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (event.target.closest(`.${styles.menuContainer}`) === null) {
-        setOpenMenuId(null);
-      }
-    };
-    document.addEventListener('click', handleClickOutside);
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, []);
+  // Pagination logic
+  const indexOfLastQuestion = currentPage * questionsPerPage;
+  const indexOfFirstQuestion = indexOfLastQuestion - questionsPerPage;
+  const currentQuestions = questions.slice(indexOfFirstQuestion, indexOfLastQuestion);
+
+  const totalPages = Math.ceil(questions.length / questionsPerPage);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
+  };
 
   return (
     <div className={styles.questionsPage}>
@@ -126,10 +131,18 @@ const Questions = () => {
           </tr>
         </thead>
         <tbody>
-          {questions.map((question) => (
+          {currentQuestions.map((question) => (
             <tr key={question.id}>
               <td>{question.text}</td>
-              <td>{question.period === '0' ? 'Full Time' : question.period === '1' ? 'First Half' : 'Second Half'}</td>
+              <td>
+                {question.period === '0' || question.period === 0 || question.period === '6' || question.period === 6
+                  ? 'Full Time'
+                  : question.period === '1' || question.period === 1
+                  ? 'First Half'
+                  : question.period === '2' || question.period === 2
+                  ? 'Second Half'
+                  : 'Unknown Period'}
+              </td>
               <td>{question.statField}</td>
               <td>
                 <span className={question.status === 'enabled' ? styles.statusEnabled : styles.statusDisabled}>
@@ -141,10 +154,7 @@ const Questions = () => {
               </td>
               <td>
                 <div className={styles.menuContainer}>
-                  <FiMoreVertical
-                    className={styles.menuIcon}
-                    onClick={() => toggleMenu(question.id)}
-                  />
+                  <FiMoreVertical className={styles.menuIcon} onClick={() => toggleMenu(question.id)} />
                   {openMenuId === question.id && (
                     <div className={styles.menuDropdown}>
                       <button onClick={() => handleEdit(question)}>Edit</button>
@@ -160,6 +170,13 @@ const Questions = () => {
           ))}
         </tbody>
       </table>
+
+      {/* Pagination Controls */}
+      <div className={styles.pagination}>
+        <button onClick={handlePreviousPage} disabled={currentPage === 1}>Previous</button>
+        <span>Page {currentPage} of {totalPages}</span>
+        <button onClick={handleNextPage} disabled={currentPage === totalPages}>Next</button>
+      </div>
     </div>
   );
 };

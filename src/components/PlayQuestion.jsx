@@ -22,6 +22,14 @@ const PlayQuestion = ({ question, onClose }) => {
     fetchFiles();
   }, []);
 
+  const getStatValue = (statistics, type, period) => {
+    const periodData = statistics.find(item => item.period === parseInt(period, 10));
+    if (!periodData) return { team1: 0, team2: 0 };
+
+    const statEntry = periodData.data.find(entry => entry.text.args.includes(type));
+    return statEntry ? { team1: parseInt(statEntry.team1) || 0, team2: parseInt(statEntry.team2) || 0 } : { team1: 0, team2: 0 };
+  };
+
   const handleLoadFile = async () => {
     if (!selectedFile) return;
 
@@ -46,19 +54,52 @@ const PlayQuestion = ({ question, onClose }) => {
           const team2Goals = scoreData.team2;
           result = { team1: team1Goals, team2: team2Goals };
 
-          // Handle special cases for BTTS and BTTS & Over 2.5 Goals
           if (question.comparisonTarget === 'btts') {
-            computedAnswer = team1Goals > 0 && team2Goals > 0 ? 'Yes' : 'No';
+            computedAnswer = (team1Goals > 0 && team2Goals > 0) ? 'Yes' : 'No';
           } else if (question.comparisonTarget === 'btts_over_2_5') {
             const totalGoals = team1Goals + team2Goals;
-            computedAnswer = team1Goals > 0 && team2Goals > 0 && totalGoals > 2.5 ? 'Yes' : 'No';
+            computedAnswer = (team1Goals > 0 && team2Goals > 0 && totalGoals > 2.5) ? 'Yes' : 'No';
+          } else if (question.comparisonTarget === 'periods') {
+            const firstHalf = data.scores.find(score => score.type === 1);
+            const secondHalf = data.scores.find(score => score.type === 2);
+
+            const firstHalfGoals = firstHalf ? firstHalf.team1 + firstHalf.team2 : 0;
+            const secondHalfGoals = secondHalf ? secondHalf.team1 + secondHalf.team2 : 0;
+
+            result = { firstHalf: firstHalfGoals, secondHalf: secondHalfGoals };
+            if (firstHalfGoals > secondHalfGoals) {
+              computedAnswer = 'First Half';
+            } else if (secondHalfGoals > firstHalfGoals) {
+              computedAnswer = 'Second Half';
+            } else {
+              computedAnswer = 'Draw';
+            }
+
+            if (question.comparisonTarget === 'btts') {
+              computedAnswer = team1Goals > 0 && team2Goals > 0 ? 'Yes' : 'No';
+            } else if (question.comparisonTarget === 'btts_over_2_5') {
+              const totalGoals = team1Goals + team2Goals;
+              computedAnswer = team1Goals > 0 && team2Goals > 0 && totalGoals > 2.5 ? 'Yes' : 'No';
+            }
+            else  if (question.comparisonTarget === 'btts') {
+              computedAnswer = team1Goals > 0 && team2Goals > 0 ? 'Yes' : 'No';
+            } else if (question.comparisonTarget === 'btts_over_2_5') {
+              const totalGoals = team1Goals + team2Goals;
+              computedAnswer = team1Goals > 0 && team2Goals > 0 && totalGoals > 2.5 ? 'Yes' : 'No';
+            }
           } else if (question.operator === 'sum') {
             computedAnswer = team1Goals + team2Goals;
           } else if (question.operator === 'greaterThan') {
             const totalGoals = team1Goals + team2Goals;
             computedAnswer = totalGoals > parseFloat(question.threshold) ? 'Yes' : 'No';
           } else if (question.operator === 'comparison' && question.comparisonTarget === 'teams') {
-            computedAnswer = team1Goals > team2Goals ? team1Name : team2Name;
+            if (team1Goals > team2Goals) {
+              computedAnswer = team1Name;
+            } else if (team2Goals > team1Goals) {
+              computedAnswer = team2Name;
+            } else {
+              computedAnswer = 'Draw';
+            }
           } else if (question.operator === 'singleTeam') {
             computedAnswer = question.teamSelection === 'team1' ? team1Goals : team2Goals;
           }
@@ -66,61 +107,53 @@ const PlayQuestion = ({ question, onClose }) => {
           setStatResult(result);
           setAnswer(computedAnswer);
         } else {
-          console.error('No goals data found for the selected period');
-          setStatResult('No goals data found');
+          setStatResult({ team1: 0, team2: 0 });
+          setAnswer('No');
         }
       } else {
         // Handle non-goal stats
-        const periodData = data.statistics.find(item => item.period === parseInt(question.period, 10));
-        if (!periodData) {
-          console.error('No data found for the specified period');
-          setStatResult('No data found for the specified period');
-          return;
-        }
+        const statData = getStatValue(data.statistics, question.statField, question.period);
+        result = statData;
 
-        const statEntry = periodData.data.find(entry => entry.text.args.includes(question.statField));
-        if (statEntry) {
-          let computedAnswer;
+        if (question.comparisonTarget === 'periods') {
+          const firstHalfData = getStatValue(data.statistics, question.statField, 1);
+          const secondHalfData = getStatValue(data.statistics, question.statField, 2);
 
-          if (question.operator === 'sum') {
-            result = { team1: statEntry.team1, team2: statEntry.team2 };
-            computedAnswer = Number(statEntry.team1) + Number(statEntry.team2);
-          } else if (question.operator === 'greaterThan') {
-            const total = Number(statEntry.team1) + Number(statEntry.team2);
-            result = { team1: statEntry.team1, team2: statEntry.team2 };
-            computedAnswer = total > Number(question.threshold) ? 'Yes' : 'No';
-          } else if (question.operator === 'comparison' && question.comparisonTarget === 'teams') {
-            result = { team1: statEntry.team1, team2: statEntry.team2 };
-            computedAnswer = statEntry.team1 > statEntry.team2 ? team1Name : team2Name;
-          } else if (question.operator === 'comparison' && question.comparisonTarget === 'periods') {
-            const firstHalfData = data.statistics.find(item => item.period === 1);
-            const secondHalfData = data.statistics.find(item => item.period === 2);
+          const firstHalfTotal = firstHalfData.team1 + firstHalfData.team2;
+          const secondHalfTotal = secondHalfData.team1 + secondHalfData.team2;
 
-            const firstHalfEntry = firstHalfData?.data.find(entry => entry.text.args.includes(question.statField));
-            const secondHalfEntry = secondHalfData?.data.find(entry => entry.text.args.includes(question.statField));
+          result = { firstHalf: firstHalfTotal, secondHalf: secondHalfTotal };
 
-            const firstHalfTotal = firstHalfEntry ? Number(firstHalfEntry.team1) + Number(firstHalfEntry.team2) : 0;
-            const secondHalfTotal = secondHalfEntry ? Number(secondHalfEntry.team1) + Number(secondHalfEntry.team2) : 0;
-
-            result = {
-              firstHalf: firstHalfTotal,
-              secondHalf: secondHalfTotal
-            };
-            computedAnswer = firstHalfTotal > secondHalfTotal ? 'First Half' : 'Second Half';
-          } else if (question.operator === 'singleTeam') {
-            computedAnswer = question.teamSelection === 'team1' ? statEntry.team1 : statEntry.team2;
+          if (firstHalfTotal > secondHalfTotal) {
+            computedAnswer = 'First Half';
+          } else if (secondHalfTotal > firstHalfTotal) {
+            computedAnswer = 'Second Half';
+          } else {
+            computedAnswer = 'Draw';
           }
-
-          setStatResult(result);
-          setAnswer(computedAnswer);
-        } else {
-          console.error('Stat field not found in period data');
-          setStatResult('Stat field not found');
+        } else if (question.operator === 'sum') {
+          computedAnswer = statData.team1 + statData.team2;
+        } else if (question.operator === 'greaterThan') {
+          const total = statData.team1 + statData.team2;
+          computedAnswer = total > Number(question.threshold) ? 'Yes' : 'No';
+        } else if (question.operator === 'comparison' && question.comparisonTarget === 'teams') {
+          if (statData.team1 > statData.team2) {
+            computedAnswer = team1Name;
+          } else if (statData.team2 > statData.team1) {
+            computedAnswer = team2Name;
+          } else {
+            computedAnswer = 'Draw';
+          }
+        } else if (question.operator === 'singleTeam') {
+          computedAnswer = question.teamSelection === 'team1' ? statData.team1 : statData.team2;
         }
+
+        setStatResult(result);
+        setAnswer(computedAnswer);
       }
     } catch (error) {
       console.error('Error loading file:', error);
-      setStatResult('Error loading file');
+      setStatResult({ team1: 0, team2: 0 });
     }
   };
 
@@ -145,18 +178,27 @@ const PlayQuestion = ({ question, onClose }) => {
       <button className={styles.executeButton} onClick={handleLoadFile}>Execute</button>
 
       {statResult && (
-        <div className={styles.resultContainer}>
-          <h4 className={styles.resultTitle}>Result:</h4>
-          <div>{teamNames.team1}: {statResult.team1}</div>
-          <div>{teamNames.team2}: {statResult.team2}</div>
-          {answer && (
-            <div className={styles.answerContainer}>
-              <h4 className={styles.answerTitle}>Answer:</h4>
-              <p className={styles.answerValue}>{answer}</p>
-            </div>
-          )}
-        </div>
-      )}
+  <div className={styles.resultContainer}>
+    <h4 className={styles.resultTitle}>Result:</h4>
+    {question.comparisonTarget === 'periods' ? (
+      <>
+        <div>First Half: {statResult.firstHalf} </div>
+        <div>Second Half: {statResult.secondHalf} </div>
+      </>
+    ) : (
+      <>
+        <div>{teamNames.team1}: {statResult.team1}</div>
+        <div>{teamNames.team2}: {statResult.team2}</div>
+      </>
+    )}
+    {answer && (
+      <div className={styles.answerContainer}>
+        <h4 className={styles.answerTitle}>Answer:</h4>
+        <p className={styles.answerValue}>{answer}</p>
+      </div>
+    )}
+  </div>
+)}
 
       <button className={styles.cancelButton} onClick={onClose}>Close</button>
     </div>
