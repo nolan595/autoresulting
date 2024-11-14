@@ -3,6 +3,8 @@ import axios from 'axios';
 import Select from 'react-select';
 import styles from './styles/CreateQuestion.module.css';
 
+const API_BASE_URL = 'https://autoresultingbackend-production.up.railway.app/api';
+
 const statsFields = [
   { value: "scores", label: "Goals" },
   { value: "stats.football.match.ball_possesion", label: "Ball Possession" },
@@ -79,7 +81,8 @@ const CreateQuestion = ({ onClose, onAddQuestion, editingQuestion }) => {
       !questionText.trim() ||
       !selectedStat ||
       selectedPeriod === '' ||
-      selectedOperator === ''
+      selectedOperator === '' ||
+      (selectedOperator === 'comparison' && !comparisonTarget)
     ) {
       alert("Please fill in all fields");
       return;
@@ -99,9 +102,9 @@ const CreateQuestion = ({ onClose, onAddQuestion, editingQuestion }) => {
 
     try {
       if (editingQuestion) {
-        await axios.put(`http://localhost:5001/api/questions/${newQuestion.id}`, newQuestion);
+        await axios.put(`${API_BASE_URL}/questions/${newQuestion.id}`, newQuestion);
       } else {
-        await axios.post('http://localhost:5001/api/questions', newQuestion);
+        await axios.post(`${API_BASE_URL}/questions`, newQuestion);
       }
       onClose();
     } catch (error) {
@@ -121,7 +124,6 @@ const CreateQuestion = ({ onClose, onAddQuestion, editingQuestion }) => {
           className={styles.input}
         />
 
-        {/* Updated Dropdown for Stat Field */}
         <Select
           options={statsFields}
           value={selectedStat}
@@ -131,55 +133,48 @@ const CreateQuestion = ({ onClose, onAddQuestion, editingQuestion }) => {
           className={styles.select}
         />
 
-        {/* Period Selection Based on Selected Stat */}
         <select
-  value={selectedPeriod}
-  onChange={(e) => setSelectedPeriod(e.target.value)}
-  className={styles.select}
->
-  {(selectedStat?.value === 'scores' ? goalPeriods : periods).map((period) => (
-    <option key={period.value} value={period.value}>
-      {period.label}
-    </option>
-  ))}
-</select>
-
-
-
-
+          value={selectedPeriod}
+          onChange={(e) => setSelectedPeriod(e.target.value)}
+          className={styles.select}
+        >
+          {(selectedStat?.value === 'scores' ? goalPeriods : periods).map((period) => (
+            <option key={period.value} value={period.value}>{period.label}</option>
+          ))}
+        </select>
 
         <select
           value={selectedOperator}
           onChange={(e) => setSelectedOperator(e.target.value)}
           className={styles.select}
         >
-          {operators.map((op) => (
+          {operators.map(op => (
             <option key={op.value} value={op.value}>{op.label}</option>
           ))}
         </select>
 
-        {selectedOperator === 'greaterThan' && (
-          <input
-            type="number"
-            value={threshold}
-            onChange={(e) => setThreshold(e.target.value)}
-            placeholder="Enter threshold"
-            className={styles.input}
+        {selectedOperator === 'comparison' && (
+          <Select
+            options={comparisonTargets}
+            value={comparisonTargets.find(ct => ct.value === comparisonTarget)}
+            onChange={(option) => setComparisonTarget(option.value)}
+            placeholder="Select Comparison Target"
+            className={styles.select}
           />
         )}
 
-{selectedOperator === 'comparison' && selectedStat?.value === 'scores' && (
-  <select
-    value={comparisonTarget}
-    onChange={(e) => setComparisonTarget(e.target.value)}
-    className={styles.select}
-  >
-    {comparisonTargets.map((target) => (
-      <option key={target.value} value={target.value}>{target.label}</option>
-    ))}
-  </select>
-)}
-
+        {selectedOperator === 'singleTeam' && selectedStat?.value === 'scores' && (
+          <Select
+            options={[
+              { value: 'team1', label: 'Home Team' },
+              { value: 'team2', label: 'Away Team' }
+            ]}
+            value={{ value: teamSelection, label: teamSelection === 'team1' ? 'Home Team' : 'Away Team' }}
+            onChange={(option) => setTeamSelection(option.value)}
+            placeholder="Select Team"
+            className={styles.select}
+          />
+        )}
 
         <button onClick={handleSubmit} className={styles.buttonPrimary}>
           {editingQuestion ? "Save Changes" : "Add Question"}

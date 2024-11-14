@@ -4,6 +4,7 @@ import CreateQuestion from './CreateQuestion';
 import PlayQuestion from './PlayQuestion';
 import axios from 'axios';
 import styles from './styles/Questions.module.css';
+const API_BASE_URL = 'https://autoresultingbackend-production.up.railway.app/api';
 
 const Questions = () => {
   const [questions, setQuestions] = useState([]);
@@ -19,7 +20,7 @@ const Questions = () => {
 
   const fetchQuestions = async () => {
     try {
-      const response = await axios.get('http://localhost:5001/api/questions');
+      const response = await axios.get(`${API_BASE_URL}/questions`);
       setQuestions(response.data);
     } catch (error) {
       console.error('Error fetching questions:', error);
@@ -29,15 +30,13 @@ const Questions = () => {
   const handleAddQuestion = async (newQuestion) => {
     try {
       if (editingQuestion) {
-        await axios.put(`http://localhost:5001/api/questions/${newQuestion.id}`, newQuestion);
+        await axios.put(`${API_BASE_URL}/questions/${newQuestion.id}`, newQuestion);
       } else {
         newQuestion.status = 'enabled';
-        await axios.post('http://localhost:5001/api/questions', newQuestion);
+        await axios.post(`${API_BASE_URL}/questions`, newQuestion);
       }
-      
-      // Fetch the updated list of questions only once
       fetchQuestions();
-      setIsPopupOpen(false); // Close the CreateQuestion popup
+      setIsPopupOpen(false);
       setEditingQuestion(null);
     } catch (error) {
       console.error('Error saving question:', error);
@@ -54,7 +53,7 @@ const Questions = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/api/questions/${id}`);
+      await axios.delete(`${API_BASE_URL}/questions/${id}`);
       fetchQuestions();
     } catch (error) {
       console.error('Error deleting question:', error);
@@ -67,7 +66,7 @@ const Questions = () => {
       ...question,
       status: question.status === 'enabled' ? 'disabled' : 'enabled'
     };
-    await axios.put(`http://localhost:5001/api/questions/${question.id}`, updatedQuestion);
+    await axios.put(`${API_BASE_URL}/questions/${question.id}`, updatedQuestion);
     fetchQuestions();
   };
 
